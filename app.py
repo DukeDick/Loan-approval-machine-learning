@@ -1,6 +1,13 @@
+import joblib
 import streamlit as st
 import pandas as pd
-import joblib
+
+# Add imports for classes used inside pipeline
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.preprocessing import OneHotEncoder, StandardScaler
+from sklearn.compose import ColumnTransformer
+from sklearn.pipeline import Pipeline
+
 
 st.set_page_config(page_title="Loan Approval - Random Forest", page_icon="🏦")
 st.title("🏦 Loan Approval Predictor (Random Forest)")
